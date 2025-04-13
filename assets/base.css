@@ -5,7 +5,8 @@
   --alpha-badge-border: 0.1;
   --focused-base-outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   --focused-base-outline-offset: 0.3rem;
-  --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .product-card-wrapper .card,
@@ -481,6 +482,26 @@ h6:empty {
   display: none;
 }
 
+.header__menu-item,
+.header__menu-item a,
+.header__menu-item span,
+.header__menu-item:visited,
+.header__menu-item:active,
+.header__menu-item:hover,
+.header__menu-link,
+.header__active-menu-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__menu-item:hover {
+  font-weight: 600;
+}
+
+.header__menu-item:hover {
+  font-weight: 600;
+}
+
 .link,
 .customer a {
   cursor: pointer;
@@ -491,7 +512,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: inherit;
 }
 
@@ -1320,15 +1341,14 @@ button.shopify-payment-button__button--unbranded {
 
 shopify-accelerated-checkout {
   --shopify-accelerated-checkout-button-border-radius: var(--buttons-radius-outset);
-  --shopify-accelerated-checkout-button-box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
-  rgba(var(--color-shadow), var(--shadow-opacity));
+  --shopify-accelerated-checkout-button-box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset)
+    var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
 shopify-accelerated-checkout-cart {
   --shopify-accelerated-checkout-button-border-radius: var(--buttons-radius-outset);
-  --shopify-accelerated-checkout-button-box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
-  rgba(var(--color-shadow), var(--shadow-opacity));
+  --shopify-accelerated-checkout-button-box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset)
+    var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
-
 
 /* Button - other */
 
@@ -2759,9 +2779,10 @@ details[open] > .header__submenu {
 
 /* Header menu */
 .header__inline-menu {
-  margin-left: -1.2rem;
+  padding-left: 1.5rem;
   grid-area: navigation;
   display: none;
+  text-align: center;
 }
 
 .header--top-center .header__inline-menu,
@@ -2793,8 +2814,9 @@ details[open] > .header__submenu {
 
 .header__menu-item {
   padding: 1.2rem;
-  text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
+  text-decoration: none;
+  color: inherit;
 }
 
 .header__menu-item:hover {
@@ -2805,13 +2827,8 @@ details[open] > .header__submenu {
   transition: text-decoration var(--duration-short) ease;
 }
 
-.header__menu-item:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-}
-
 details[open] > .header__menu-item {
-  text-decoration: underline;
+  font-weight: 600;
 }
 
 details[open]:hover > .header__menu-item {
@@ -2823,10 +2840,12 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__active-menu-item {
-  transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+}
+
+.header__menu-item.promo,
+.header__active-menu-item.promo {
+  color: red;
 }
 
 .header__menu-item:hover .header__active-menu-item {
@@ -2865,10 +2884,6 @@ details[open] > .header__menu-item .icon-caret {
 .header__submenu .header__menu-item {
   justify-content: space-between;
   padding: 0.8rem 2rem;
-}
-
-.header__submenu .header__menu-item:hover {
-  text-decoration-line: underline;
 }
 
 .header__menu-item .icon-caret {
