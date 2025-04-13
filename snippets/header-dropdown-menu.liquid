@@ -13,9 +13,10 @@
           <header-menu>
             <details id="Details-HeaderMenu-{{ forloop.index }}">
               <summary
-                id="HeaderMenu-{{ link.handle }}"
-                class="header__menu-item list-menu__item link focus-inset"
-              >
+              id="HeaderMenu-{{ link.handle }}"
+              class="header__menu-item list-menu__item focus-inset"
+            >
+              <a href="{{ link.url }}" class="header__menu">
                 <span
                   {%- if link.child_active %}
                     class="header__active-menu-item"
@@ -23,8 +24,9 @@
                 >
                   {{- link.title | escape -}}
                 </span>
-                {{- 'icon-caret.svg' | inline_asset_content -}}
-              </summary>
+              </a>
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </summary>
               <ul
                 id="HeaderMenu-MenuList-{{ forloop.index }}"
                 class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
@@ -41,15 +43,16 @@
                         {% if childlink.current %}
                           aria-current="page"
                         {% endif %}
+                        
                       >
                         {{ childlink.title | escape }}
                       </a>
                     {%- else -%}
                       <details id="Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}">
                         <summary
-                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                          class="header__menu-item link link--text list-menu__item focus-inset caption-large"
-                        >
+                        id="HeaderMenu-{{ link.handle }}"
+                        class="header__menu-item list-menu__item link focus-inset"
+                      >
                           <span>{{ childlink.title | escape }}</span>
                           {{- 'icon-caret.svg' | inline_asset_content -}}
                         </summary>
@@ -66,6 +69,7 @@
                                 {% if grandchildlink.current %}
                                   aria-current="page"
                                 {% endif %}
+                                
                               >
                                 {{ grandchildlink.title | escape }}
                               </a>
@@ -83,14 +87,15 @@
           <a
             id="HeaderMenu-{{ link.handle }}"
             href="{{ link.url }}"
-            class="header__menu-item list-menu__item link link--text focus-inset"
+            class="header__menu-item list-menu__item link link--text focus-inset {% if link.title == 'PROMOCJE' %}promo{% endif %}"
             {% if link.current %}
               aria-current="page"
             {% endif %}
+        
           >
             <span
               {%- if link.current %}
-                class="header__active-menu-item"
+                class="header__active-menu-item {% if link.title == 'PROMOCJE' %}promo{% endif %}"
               {% endif %}
             >
               {{- link.title | escape -}}
