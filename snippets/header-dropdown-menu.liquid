@@ -11,7 +11,7 @@
       <li>
         {%- if link.links != blank -%}
           <header-menu>
-            <details id="Details-HeaderMenu-{{ forloop.index }}">
+            <details id="Details-HeaderMenu-{{ forloop.index }}" class="details-headerMenu">
               <summary
               id="HeaderMenu-{{ link.handle }}"
               class="header__menu-item list-menu__item focus-inset"
@@ -106,3 +106,18 @@
     {%- endfor -%}
   </ul>
 </nav>
+
+<script>
+const headerMenu = document.querySelectorAll('.details-headerMenu');
+
+headerMenu.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    el.setAttribute("open", "true");
+  });
+
+  el.addEventListener('mouseleave', () => {
+    el.removeAttribute("open");
+  });
+});
+
+</script>
