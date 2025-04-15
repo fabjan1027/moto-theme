@@ -2808,10 +2808,16 @@
           },
           "options__3": {
             "label": "Liczby"
+          },
+          "options__4": {
+            "label": "Pasek progresu"
           }
         },
         "auto_rotate": {
           "label": "Automatyczna zmiana slajdów"
+        },
+        "show_controls": {
+          "label": "Pokaż przyciski startu/stop"
         },
         "change_slides_speed": {
           "label": "Zmieniaj slajdy co"
