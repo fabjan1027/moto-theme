@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style scoped>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill  {
+      background: red;
+    }
+    
+    .swiper-pagination.swiper-pagination-progressbar {
+  position: relative;
+
+}
+    
+  </style>
+</head>
+
+<body>
+
+<div class="swiper mySwiper">
+<div class="swiper-wrapper">
+  {%- for block in section.blocks -%}
+    <div class="swiper-slide" {{ section.settings.slide_height }}>
+      <img src="{{ block.settings.image | img_url: 'master' }}" style="height: {{ block.settings.image_height }}rem;">
+    </div>
+  {%- endfor -%}
+  </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        enabled: true,
+        delay: 5000,
+      }
+
+      
+    });
+    console.log(swiper)
+  </script>
+</body>
+
+</html>
+
+
+{% schema %}
+  {
+    "name": "Custom Slideshow",
+    "settings": [],
+   "blocks": [
+  {
+    "type": "slide",
+    "name": "Slide",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "range",
+        "id": "image_height",
+        "label": "Image height (rem)",
+        "min": 10,
+        "max": 100,
+        "step": 10,
+        "default": 10
+      },
+      {
+      "type": "select",
+      "id": "slide_height",
+      "label": "Wysokość slajdu",
+      "options": [
+        { "value": "small", "label": "Mały" },
+        { "value": "medium", "label": "Średni" },
+        { "value": "large", "label": "Duży" }
+      ],
+    }
+    ]
+  }
+],
+    "max_blocks": 10,
+    "presets": [
+      {
+        "name": "Custom Slideshow",
+        "category": "Slideshow"
+      }
+    ]
+  }
+  {% endschema %}
+  
