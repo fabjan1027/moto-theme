@@ -2105,6 +2105,7 @@ input[type='checkbox'] {
   align-items: center;
   font-size: 0.9rem;
   bottom: 0.8rem;
+
   left: 2.2rem;
   line-height: calc(1 + 0.1 / var(--font-body-scale));
 }
@@ -2525,9 +2526,9 @@ input[type='checkbox'] {
 /* Header icons */
 .header__icons {
   display: flex;
-  grid-area: icons;
   justify-self: end;
-  padding-right: 0.8rem;
+  grid-area: icons;
+  gap: 1rem;
 }
 
 .header__icons .shopify-app-block {
@@ -2612,6 +2613,14 @@ account-icon {
 }
 
 /* Search */
+
+.search-desktop {
+  display: block;
+}
+.search-mobile {
+  display: none;
+}
+
 menu-drawer + .header__search {
   display: none;
 }

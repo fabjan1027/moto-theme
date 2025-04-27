@@ -11,6 +11,30 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_EjjBJT": {
+          "type": "announcement",
+          "settings": {
+            "text": "Darmowa dostawa od 99zł",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_EjjBJT"
+      ],
+      "settings": {
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-4",
+        "show_line_separator": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
     "header": {
       "type": "header",
       "settings": {
@@ -29,29 +53,10 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement_EjjBJT": {
-          "type": "announcement",
-          "settings": {
-            "text": "Darmowa dostawa od 99zł",
-            "link": ""
-          }
-        }
-      },
-      "block_order": ["announcement_EjjBJT"],
-      "settings": {
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "color_scheme": "scheme-4",
-        "show_line_separator": false,
-        "show_social": false,
-        "enable_country_selector": false,
-        "enable_language_selector": false
-      }
     }
   },
-  "order": ["announcement-bar", "header"]
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
 }
