@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html lang="pl">
 
 <head>
   <meta charset="utf-8" />
@@ -8,7 +8,6 @@
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!-- Demo styles -->
   <style scoped>
     html,
     body {
@@ -47,34 +46,32 @@
       object-fit: contain;
     }
 
-    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill  {
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
       background: red;
     }
-    
-    .swiper-pagination.swiper-pagination-progressbar {
-  position: relative;
 
-}
-    
+    .swiper-pagination.swiper-pagination-progressbar {
+      position: relative;
+    }
   </style>
 </head>
 
 <body>
 
-<div class="swiper mySwiper">
-<div class="swiper-wrapper">
-  {%- for block in section.blocks -%}
-    <div class="swiper-slide" {{ section.settings.slide_height }}>
-      <img src="{{ block.settings.image | img_url: 'master' }}" style="height: {{ block.settings.image_height }}rem;">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        <div class="swiper-slide {{ section.settings.slide_height }}">
+          <a href="{{ block.settings.url }}" target="_blank">
+            <img src="{{ block.settings.image | img_url: 'master' }}" style="height: {{ block.settings.image_height }}rem;">
+          </a>
+        </div>
+      {%- endfor -%}
     </div>
-  {%- endfor -%}
-  </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
   </div>
-
-  
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -93,64 +90,60 @@
         enabled: true,
         delay: 5000,
       }
-
-      
     });
-    console.log(swiper)
   </script>
 </body>
 
 </html>
 
-
 {% schema %}
-  {
-    "name": "Custom Slideshow",
-    "settings": [],
-   "blocks": [
-  {
-    "type": "slide",
-    "name": "Slide",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading"
-      },
-      {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image"
-      },
-      {
-        "type": "range",
-        "id": "image_height",
-        "label": "Image height (rem)",
-        "min": 10,
-        "max": 100,
-        "step": 10,
-        "default": 10
-      },
-      {
-      "type": "select",
-      "id": "slide_height",
-      "label": "Wysokość slajdu",
-      "options": [
-        { "value": "small", "label": "Mały" },
-        { "value": "medium", "label": "Średni" },
-        { "value": "large", "label": "Duży" }
-      ],
+{
+  "name": "Custom Slideshow",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+      
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "image_height",
+          "label": "Image height (rem)",
+          "min": 10,
+          "max": 100,
+          "step": 10,
+          "default": 10
+        },
+        {
+          "type": "select",
+          "id": "slide_height",
+          "label": "Wysokość slajdu",
+          "options": [
+            { "value": "small", "label": "Mały" },
+            { "value": "medium", "label": "Średni" },
+            { "value": "large", "label": "Duży" }
+          ]
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link do produktu"
+        }
+      ]
     }
-    ]
-  }
-],
-    "max_blocks": 10,
-    "presets": [
-      {
-        "name": "Custom Slideshow",
-        "category": "Slideshow"
-      }
-    ]
-  }
-  {% endschema %}
-  
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Custom Slideshow",
+      "category": "Slideshow"
+    }
+  ]
+}
+{% endschema %}
