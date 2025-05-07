@@ -20,7 +20,7 @@
     </form>
   </div>
 
-  <details-modal class="search-mobile">
+ <details-modal class="search-mobile">
     <details>
       <summary
         class="header__icon header__icon--search modal__toggle"
@@ -69,23 +69,95 @@
 </div>
 
 {%-style-%}
-  @media (max-width: 768px) {
+
+@media (max-width: 768px) {
   .search-desktop {
     display: none;
   }
+
   .search-mobile {
     display: block;
   }
-}
 
-.mobile-search-icon {
-  background-color: #e10600;
-  padding: 12px;
-  border-radius: 8px;
-}
+  .header-search {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
 
-.mobile-search-icon:hover {
-  background-color: darkred;
-  transform: scale(1.05);
+  .search-mobile .search__input.field__input {
+    width: 100%;
+    background-color: rgba(106, 106, 106, 0.2);
+    border-radius: 999px;
+  }
 }
-{%-endstyle-%}
+  
+  .header-search {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  
+  .search-desktop {
+    width: 100%;
+  }
+  
+  .search-desktop .search__input.field__input {
+    width: 500px;
+    background-color: rgba(106, 106, 106, 0.2);
+    border-radius: 999px;
+  }
+  
+  .search-desktop .field::after {
+    box-shadow: none;
+  }
+  
+  .search-desktop .field:hover::after {
+    box-shadow: none;
+    border-radius: 999px;
+  }
+  
+  .search-desktop .search {
+    border-radius: 50%;
+  }
+  
+
+  .search-mobile .field::after {
+    box-shadow: none;
+  }
+  
+  .search-mobile .field:hover::after {
+    box-shadow: none;
+    border-radius: 999px;
+  }
+  
+  .search-mobile .search__input.field__input {
+    width: 250px;
+    background-color: rgba(106, 106, 106, 0.2);
+    border-radius: 999px;
+  }
+
+  .search-mobile .mobile-search-icon {
+    background-color: #e10600;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .search-mobile .mobile-search-icon:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+  }
+  
+  .search-mobile .search-modal__close-button {
+    background: none;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    position: absolute;
+    right: 1.3rem;
+    top: 2.8rem;
+  }
+  
+  {%-endstyle-%}
