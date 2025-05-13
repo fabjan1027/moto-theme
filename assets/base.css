@@ -513,7 +513,7 @@ h6:empty {
   color: rgb(var(--color-link));
   background-color: transparent;
   font-size: 1.6rem;
-  font-family: inherit;
+  font-family: var(--font-body-family);
 }
 
 .link--text {
@@ -2062,11 +2062,6 @@ input[type='checkbox'] {
   background-color: transparent;
 }
 
-.modal__close-button .icon {
-  width: 1.7rem;
-  height: 1.7rem;
-}
-
 .modal__content {
   position: absolute;
   top: 0;
@@ -2567,9 +2562,9 @@ input[type='checkbox'] {
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
-  fill: none;
+  height: 3rem;
+  width: 3rem;
+  fill: white;
   vertical-align: middle;
 }
 
@@ -2614,10 +2609,6 @@ account-icon {
 
 /* Search */
 
-.search-mobile {
-  display: none;
-}
-
 menu-drawer + .header__search {
   display: none;
 }
@@ -2627,12 +2618,16 @@ menu-drawer + .header__search {
   justify-self: start;
 }
 
+/* .header > .search-mobile {
+  grid-area: left-icons;
+} */
+
 .header--top-center.drawer-menu > .header__search {
   margin-left: 3.2rem;
 }
 
 .header--top-center header-drawer {
-  grid-area: left-icons;
+  display: flex;
 }
 
 .header:not(.header--has-menu) * > .header__search {
@@ -2692,6 +2687,7 @@ details[open] .modal-overlay::after {
 
 .search-modal__content {
   display: flex;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -2711,12 +2707,6 @@ details[open] .modal-overlay::after {
 
 .search-modal__form {
   width: 100%;
-}
-
-.search-modal__close-button {
-  position: absolute;
-  right: 0.8rem;
-  all: unset;
 }
 
 @media screen and (min-width: 750px) {

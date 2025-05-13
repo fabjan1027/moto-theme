@@ -6,12 +6,13 @@
 {% endcomment %}
 
 <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
+  <div class="drawer-icons-wrapper">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
     <summary
       class="header__icon header__icon--menu header__icon--summary link focus-inset"
       aria-label="{{ 'sections.header.menu' | t }}"
     >
-      <span>
+        <span class="hamburger-mobile-icon">
         {{- 'icon-hamburger.svg' | inline_asset_content -}}
         {{- 'icon-close.svg' | inline_asset_content -}}
       </span>
@@ -292,4 +293,127 @@
       </div>
     </div>
   </details>
+  <details-modal class="search-mobile">
+    <details>
+      <summary
+        class="header__icon header__icon--search modal__toggle"
+        aria-haspopup="dialog"
+        aria-label="{{ 'general.search.search' | t }}"
+      >
+        <span class="mobile-search-icon">
+          {{- 'icon-search.svg' | inline_asset_content -}}
+        </span>
+      </summary>
+      <div class="search-modal modal__content gradient" role="dialog" aria-modal="true">
+        <div class="modal-overlay"></div>
+        <div class="search-modal__content" tabindex="-1">
+          <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+            <div class="field">
+              <input
+                class="search__input field__input"
+                id="{{ input_id }}"
+                type="search"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.search' | t }}"
+              >
+              <label class="field__label" for="{{ input_id }}">{{ 'general.search.search' | t }}</label>
+              <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                <span class="svg-wrapper">
+                  {{- 'icon-search.svg' | inline_asset_content -}}
+                </span>
+              </button>
+            </div>
+          </form>
+
+          <button
+            type="button"
+            class="search-modal__close-button modal__close-button"
+            aria-label="{{ 'accessibility.close' | t }}"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-close.svg' | inline_asset_content -}}
+            </span>
+          </button>
+        </div>
+      </div>
+    </details>
+  </details-modal>
+</div>
+
 </header-drawer>
+
+{% style %}
+
+.drawer-icons-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-modal__close-button.modal__close-button {
+    background-color: #e10600;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-modal__close-button.modal__close-button .svg-wrapper {
+ height: 2.6rem;
+ width: 2.6rem;
+}
+
+
+.hamburger-mobile-icon {
+    background-color: #e10600;
+    padding: 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .hamburger-mobile-icon:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+  }
+
+  .search-mobile .field::after {
+    box-shadow: none;
+  }
+  
+  .search-mobile .field:hover::after {
+    box-shadow: none;
+    border-radius: 999px;
+  }
+  
+  .search-mobile .search__input.field__input {
+    width: 250px;
+    background-color: rgba(106, 106, 106, 0.2);
+    border-radius: 999px;
+  }
+
+  .search-mobile .mobile-search-icon {
+    background-color: #e10600;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .search-mobile .mobile-search-icon:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+  }
+  
+  /* .search-mobile .search-modal__close-button {
+    background: none;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    position: absolute;
+    right: 1.3rem;
+    top: 2.8rem;
+  } */
+
+{% endstyle %}

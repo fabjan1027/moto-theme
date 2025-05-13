@@ -1,5 +1,4 @@
-<div class="header-search">
-  <div class="search-desktop">
+<div class="search-desktop">
     <form action="{{ routes.search_url }}" method="get" role="search" class="search">
       <div class="field">
         <input
@@ -20,68 +19,11 @@
     </form>
   </div>
 
- <details-modal class="search-mobile">
-    <details>
-      <summary
-        class="header__icon header__icon--search modal__toggle"
-        aria-haspopup="dialog"
-        aria-label="{{ 'general.search.search' | t }}"
-      >
-        <span class="mobile-search-icon">
-          {{- 'icon-search.svg' | inline_asset_content -}}
-        </span>
-      </summary>
-      <div class="search-modal modal__content gradient" role="dialog" aria-modal="true">
-        <div class="modal-overlay"></div>
-        <div class="search-modal__content" tabindex="-1">
-          <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-            <div class="field">
-              <input
-                class="search__input field__input"
-                id="{{ input_id }}"
-                type="search"
-                name="q"
-                value="{{ search.terms | escape }}"
-                placeholder="{{ 'general.search.search' | t }}"
-              >
-              <label class="field__label" for="{{ input_id }}">{{ 'general.search.search' | t }}</label>
-              <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                <span class="svg-wrapper">
-                  {{- 'icon-search.svg' | inline_asset_content -}}
-                </span>
-              </button>
-            </div>
-          </form>
+ {%-style-%}
 
-          <button
-            type="button"
-            class="search-modal__close-button modal__close-button"
-            aria-label="{{ 'accessibility.close' | t }}"
-          >
-            <span class="svg-wrapper">
-              {{- 'icon-close.svg' | inline_asset_content -}}
-            </span>
-          </button>
-        </div>
-      </div>
-    </details>
-  </details-modal>
-</div>
-
-{%-style-%}
-
-@media (max-width: 768px) {
+@media (min-width: 990px) {
   .search-desktop {
-    display: none;
-  }
-
-  .search-mobile {
     display: block;
-  }
-
-  .header-search {
-    padding: 0 1rem;
-    max-width: 100%;
   }
 
   .search-mobile .search__input.field__input {
@@ -90,16 +32,18 @@
     border-radius: 999px;
   }
 }
-  
-  .header-search {
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-  }
-  
+
+@media (max-width: 989px) {
   .search-desktop {
-    width: 100%;
+    display: none;
   }
+
+  .search-mobile .search__input.field__input {
+    width: 100%;
+    background-color: rgba(106, 106, 106, 0.2);
+    border-radius: 999px;
+  }
+}
   
   .search-desktop .search__input.field__input {
     width: 500px;
@@ -121,43 +65,6 @@
   }
   
 
-  .search-mobile .field::after {
-    box-shadow: none;
-  }
-  
-  .search-mobile .field:hover::after {
-    box-shadow: none;
-    border-radius: 999px;
-  }
-  
-  .search-mobile .search__input.field__input {
-    width: 250px;
-    background-color: rgba(106, 106, 106, 0.2);
-    border-radius: 999px;
-  }
 
-  .search-mobile .mobile-search-icon {
-    background-color: #e10600;
-    padding: 12px;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .search-mobile .mobile-search-icon:hover {
-    background-color: darkred;
-    transform: scale(1.05);
-  }
-  
-  .search-mobile .search-modal__close-button {
-    background: none;
-    border: none;
-    outline: none;
-    -webkit-appearance: none;
-    appearance: none;
-    cursor: pointer;
-    position: absolute;
-    right: 1.3rem;
-    top: 2.8rem;
-  }
   
   {%-endstyle-%}
