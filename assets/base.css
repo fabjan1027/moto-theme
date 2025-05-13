@@ -2776,6 +2776,7 @@ details[open] > .header__submenu {
 
 /* Header menu */
 .header__inline-menu {
+  font-family: var(--font-body-family);
   padding-left: 1.5rem;
   grid-area: navigation;
   display: none;
