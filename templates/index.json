@@ -47,6 +47,49 @@
       ],
       "settings": {}
     },
+    "custom-carousel": {
+      "type": "custom-carousel",
+      "blocks": {
+        "slide_y3Wj7z": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/vecteezy_adidas-logo-symbol-clothes-design-icon-abstract-football_10994276.jpg",
+            "link": "shopify://collections/hjc"
+          }
+        },
+        "slide_PHkKUA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/vecteezy_puma-logo-black-symbol-with-name-clothes-design-icon_10994431.jpg",
+            "link": ""
+          }
+        },
+        "slide_Y7pyaN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/vecteezy_air-jordan-jumpman-logo-on-transparent-background_14414668.jpg",
+            "link": ""
+          }
+        },
+        "slide_WcA7Uz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/logo_cmyk-1.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_y3Wj7z",
+        "slide_PHkKUA",
+        "slide_Y7pyaN",
+        "slide_WcA7Uz"
+      ],
+      "settings": {
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
     "collection_list_NntrAd": {
       "type": "collection-list",
       "blocks": {
@@ -287,6 +330,7 @@
   },
   "order": [
     "custom-slideshow",
+    "custom-carousel",
     "collection_list_NntrAd",
     "featured_collection",
     "featured_collection_9LwnwQ",

@@ -1,37 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Swiper demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <!-- Demo styles -->
   <style scoped>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper {
+    .slideshow {
       width: 100%;
       height: 100%;
       position: relative;
     }
-
-    .swiper-slide {
+  
+    .slideshow .swiper-slide {
       text-align: center;
       font-size: 18px;
       background: #fff;
@@ -39,29 +16,28 @@
       justify-content: center;
       align-items: center;
     }
-
-    .swiper-slide img {
+  
+    .slideshow .swiper-slide img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
-
-    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill  {
+  
+    .slideshow .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
       background: red;
     }
-    
-    .swiper-pagination.swiper-pagination-progressbar {
-  position: relative;
-
-}
-    
+  
+    .slideshow .swiper-pagination.swiper-pagination-progressbar {
+      position: relative;
+    }
   </style>
+  
 </head>
 
 <body>
-
-<div class="swiper mySwiper">
+<div class="page-width">
+<div class="swiper slideshow">
 <div class="swiper-wrapper">
   {%- for block in section.blocks -%}
     <div class="swiper-slide" {{ section.settings.slide_height }}>
@@ -73,21 +49,18 @@
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
   </div>
-
-  
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </div>
 
   <script>
-    var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper(".slideshow", {
       loop: true,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".slideshow .swiper-pagination",
         type: "progressbar",
       },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".slideshow .swiper-button-next",
+        prevEl: ".slideshow .swiper-button-prev",
       },
       autoplay: {
         enabled: true,
