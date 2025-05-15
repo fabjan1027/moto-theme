@@ -245,13 +245,23 @@
      
 
       {%- if shop.customer_accounts_enabled -%}
-        <a
-      href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-      class="button-login header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
-      rel="nofollow"
-    >
-      ZALOGUJ
-    </a>
+        {%- if customer -%}
+          <a
+            href="{{ routes.account_url }}"
+            class="button-login header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+            rel="nofollow"
+          >
+            KONTO
+          </a>
+        {%- else -%}
+          <a
+            href="{{ routes.account_login_url }}"
+            class="button-login header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+            rel="nofollow"
+          >
+            ZALOGUJ
+          </a>
+        {%- endif -%}
       {%- endif -%}
 
       {%- for block in section.blocks -%}
