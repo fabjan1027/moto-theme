@@ -1,70 +1,104 @@
 <div class="search-desktop">
-    <form action="{{ routes.search_url }}" method="get" role="search" class="search">
-      <div class="field">
-        <input
-          class="search__input field__input"
-          id="{{ input_id }}"
-          type="search"
-          name="q"
-          value="{{ search.terms | escape }}"
-          placeholder="{{ 'general.search.search' | t }}"
-        >
-        <label class="field__label" for="{{ input_id }}">{{ 'general.search.search' | t }}</label>
-        <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-          <span class="svg-wrapper">
-            {{- 'icon-search.svg' | inline_asset_content -}}
-          </span>
-        </button>
+  <div class="template-search section-{{ section.id }}-padding">
+    <div class="template-search__header">
+      <div class="template-search__search">
+        <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
+          <main-search>
+            <form
+              action="{{ routes.search_url }}"
+              method="get"
+              role="search"
+              class="search">
+              <div class="field">
+                <input
+                  class="search__input field__input"
+                  id="Search-In-Template"
+                  type="search"
+                  name="q"
+                  value="{{ search.terms | escape }}"
+                  placeholder="{{ 'general.search.search' | t }}"
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-owns="predictive-search-results"
+                  aria-controls="predictive-search-results"
+                  aria-haspopup="listbox"
+                  aria-autocomplete="list"
+                  autocorrect="off"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false" />
+
+                <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
+                <input
+                  name="options[prefix]"
+                  type="hidden"
+                  value="last" />
+
+                <div
+                  class="predictive-search predictive-search--search-template"
+                  tabindex="-1"
+                  data-predictive-search>
+                  {% render 'loading-spinner'
+                    , class: 'predictive-search__loading-state' %}
+                </div>
+
+                <span
+                  class="predictive-search-status visually-hidden"
+                  role="status"
+                  aria-hidden="true"></span>
+
+                <button
+                  type="reset"
+                  class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+                  aria-label="{{ 'general.search.reset' | t }}">
+                  <span class="svg-wrapper">
+                    {{ 'icon-reset.svg' | inline_asset_content }}
+                  </span>
+                </button>
+
+                <button
+                  type="submit"
+                  class="search__button field__button"
+                  aria-label="{{ 'general.search.search' | t }}">
+                  <span class="svg-wrapper">
+                    {{ 'icon-search.svg' | inline_asset_content }}
+                  </span>
+                </button>
+              </div>
+            </form>
+          </main-search>
+        </predictive-search>
       </div>
-    </form>
+    </div>
   </div>
+</div>
 
- {%-style-%}
-
-@media (min-width: 990px) {
-  .search-desktop {
-    display: block;
+{%- style -%}
+  @media (min-width: 990px) {
+    .search-desktop {
+      display: block;
+    }
   }
 
-  .search-mobile .search__input.field__input {
-    width: 100%;
-    background-color: rgba(106, 106, 106, 0.2);
-    border-radius: 999px;
-  }
-}
-
-@media (max-width: 989px) {
-  .search-desktop {
-    display: none;
+  @media (max-width: 989px) {
+    .search-desktop {
+      display: none;
+    }
   }
 
-  .search-mobile .search__input.field__input {
-    width: 100%;
-    background-color: rgba(106, 106, 106, 0.2);
-    border-radius: 999px;
-  }
-}
-  
   .search-desktop .search__input.field__input {
     width: 500px;
     background-color: rgba(106, 106, 106, 0.2);
     border-radius: 999px;
   }
-  
-  .search-desktop .field::after {
-    box-shadow: none;
-  }
-  
+
+  .search-desktop .field::after,
   .search-desktop .field:hover::after {
     box-shadow: none;
     border-radius: 999px;
   }
-  
+
   .search-desktop .search {
     border-radius: 50%;
   }
-  
-
-
-  
-  {%-endstyle-%}
+{%- endstyle -%}
