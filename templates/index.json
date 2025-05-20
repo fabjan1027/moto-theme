@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "custom-slideshow": {
       "type": "custom-slideshow",
@@ -15,37 +15,30 @@
         "slide_jjGNrF": {
           "type": "slide",
           "settings": {
-            "heading": "",
-            "image": "shopify://shop_images/bad125dacbb9d89a3a35dd501bc5eadf.jpg",
-            "image_height": 40,
-            "slide_height": "small"
+            "button": true,
+            "button_text": "Zobacz produkt",
+            "button_link": "shopify://products/203246365",
+            "image": "shopify://shop_images/tshirts.jpg"
           }
         },
-        "slide_xd": {
+        "slide_jjXGNrF": {
           "type": "slide",
           "settings": {
-            "heading": "",
-            "image": "shopify://shop_images/bad125dacbb9d89a3a35dd501bc5eadf.jpg",
-            "image_height": 40,
-            "slide_height": "small"
-          }
-        },
-        "slide_211": {
-          "type": "slide",
-          "settings": {
-            "heading": "",
-            "image": "shopify://shop_images/bad125dacbb9d89a3a35dd501bc5eadf.jpg",
-            "image_height": 40,
-            "slide_height": "small"
+            "button": true,
+            "button_text": "Zobacz więcej",
+            "button_link": "",
+            "image": "shopify://shop_images/small-business-interior.jpg"
           }
         }
       },
       "block_order": [
         "slide_jjGNrF",
-        "slide_xd",
-        "slide_211"
+        "slide_jjXGNrF"
       ],
-      "settings": {}
+      "settings": {
+        "button_position": "bottom-left",
+        "slideshow_height": 405
+      }
     },
     "custom-carousel": {
       "type": "custom-carousel",
@@ -77,17 +70,42 @@
             "image": "shopify://shop_images/logo_cmyk-1.png",
             "link": ""
           }
+        },
+        "slide_gJbBTq": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
+            "link": ""
+          }
+        },
+        "slide_hPYgCL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/iphone-detects-qr-code.jpg",
+            "link": ""
+          }
+        },
+        "slide_3MLmFi": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/mens-fashion-watch.jpg",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "slide_y3Wj7z",
         "slide_PHkKUA",
         "slide_Y7pyaN",
-        "slide_WcA7Uz"
+        "slide_WcA7Uz",
+        "slide_gJbBTq",
+        "slide_hPYgCL",
+        "slide_3MLmFi"
       ],
       "settings": {
-        "padding_top": 2,
-        "padding_bottom": 2
+        "slide_height": 20,
+        "space_between": 10,
+        "image_width": 120
       }
     },
     "collection_list_NntrAd": {
