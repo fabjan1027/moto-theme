@@ -475,7 +475,8 @@
 }
 
 .card-information > .price {
-  color: rgb(var(--color-foreground));
+  color: #e10600;
+  font-weight: 700;
 }
 
 .card--horizontal .card-information > .price {
