@@ -493,14 +493,13 @@ h6:empty {
 .header__active-menu-item {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .header__menu-item:hover {
   font-weight: 600;
-}
-
-.header__menu-item:hover {
-  font-weight: 600;
+  color: var(--color-accent, #000); 
+  transform: translateY(-2px);
 }
 
 .link,
@@ -509,11 +508,11 @@ h6:empty {
   display: inline-block;
   border: none;
   box-shadow: none;
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: var(--font-body-family);
 }
 
@@ -2091,7 +2090,7 @@ input[type='checkbox'] {
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-button));
+  background-color: black;
   color: rgb(var(--color-button-text));
   height: 1.7rem;
   width: 1.7rem;
@@ -2109,6 +2108,7 @@ input[type='checkbox'] {
 /* utility-bar */
 .utility-bar {
   height: 100%;
+  background-color: var(--color-accent-red);
 }
 
 .utility-bar--bottom-border {
@@ -2164,7 +2164,8 @@ input[type='checkbox'] {
 
 .announcement-bar,
 .announcement-bar__announcement {
-  color: rgb(var(--color-foreground));
+  color: white;
+  background-color: var(--color-accent-red);
   width: 100%;
   height: 100%;
   display: flex;
@@ -2266,6 +2267,7 @@ input[type='checkbox'] {
   padding: 1rem 0;
   margin: 0;
   letter-spacing: 0.1rem;
+  color: white;
   min-height: 3.8rem;
 }
 
@@ -2945,11 +2947,11 @@ details-disclosure > details {
   word-break: break-word;
 }
 
-.gradient {
+/* .gradient {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
   background-attachment: fixed;
-}
+} */
 
 @media screen and (forced-colors: active) {
   .icon {
