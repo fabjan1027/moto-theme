@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/logo_cmyk-1.png",
+    "logo": "shopify://shop_images/logo_cmyk_page-0001.jpg",
     "logo_width": 300,
-    "favicon": "shopify://shop_images/logo_cmyk-1.png",
+    "favicon": "shopify://shop_images/logo_cmyk_page-0001_bcd16b7f-0d41-4c09-8f5f-b935dd070de7.jpg",
     "type_header_font": "roboto_condensed_n4",
     "heading_scale": 100,
     "type_body_font": "roboto_condensed_n4",
@@ -138,22 +138,6 @@
       }
     },
     "content_for_index": [],
-    "blocks": {
-      "15683396631634586217": {
-        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": false,
-        "settings": {
-          "button_color": "#ab0303",
-          "secondary_color": "#FFFFFF",
-          "ternary_color": "#6A6A6A",
-          "button_icon": "chat_bubble",
-          "button_text": "need_help",
-          "button_horizontal_position": "bottom_right",
-          "button_vertical_position": "lowest",
-          "greeting_message": ""
-        }
-      }
-    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
