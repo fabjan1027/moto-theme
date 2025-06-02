@@ -58,30 +58,35 @@
         "slide_Y7pyaN": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/buse_logo.png",
             "link": ""
           }
         },
         "slide_WcA7Uz": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/HJC.png",
             "link": ""
           }
         },
         "slide_gJbBTq": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/caberg.png",
             "link": ""
           }
         },
         "slide_hPYgCL": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/airoh.png",
             "link": ""
           }
         },
         "slide_3MLmFi": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/oneal.png",
             "link": ""
           }
         }
