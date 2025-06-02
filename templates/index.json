@@ -15,17 +15,19 @@
         "slide_jjGNrF": {
           "type": "slide",
           "settings": {
-            "button": true,
+            "button": false,
             "button_text": "Zobacz produkt",
-            "button_link": "shopify://products/203246365"
+            "button_link": "shopify://products/203246365",
+            "image": "shopify://shop_images/d75d536b8b5c7b0ad07c5e9491016cd5.jpg"
           }
         },
         "slide_jjXGNrF": {
           "type": "slide",
           "settings": {
-            "button": true,
+            "button": false,
             "button_text": "Zobacz więcej",
-            "button_link": ""
+            "button_link": "",
+            "image": "shopify://shop_images/c7a73b3b6fe7e6d6f67f1ba4a600f99d.jpg"
           }
         }
       },
