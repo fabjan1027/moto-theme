@@ -11,6 +11,9 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "custom_css": [
+        "/* Załóżmy, że nagłówek kategorii to h2 */h1 {font-size: 42px; /* większy rozmiar czcionki */ font-weight: 700; /* pogrubienie */ text-transform: uppercase; /* duże litery */ letter-spacing: 1px; /* drobny kerning między literami */ color: #e2001a; /* np. czerwony pasujący do przycisku „ZALOGUJ” */ margin-bottom: 20px; /* odstęp od siatki produktów */ padding-bottom: 10px; /* odstęp pod spodem, by linia nie kleiła się do tekstu */ border-bottom: 3px solid #e2001a; /* cienka, czerwona linia pod nagłówkiem */}"
+      ],
       "settings": {
         "show_collection_description": true,
         "show_collection_image": true,
@@ -26,7 +29,7 @@
         "color_scheme": "",
         "image_ratio": "square",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
