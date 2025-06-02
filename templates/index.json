@@ -178,7 +178,7 @@
         "products_to_show": 7,
         "title": "Najczęściej kupowane",
         "heading_size": "h2",
-        "description": "",
+        "description": "<p>Poznaj nasze najczęściej kupowane produkty! To sprawdzone i cieszące się największą popularnością akcesoria i sprzęt, które doceniają nasi klienci. Zobacz, co wybierają inni, i przekonaj się, dlaczego właśnie te produkty są najchętniej wybierane. Gwarantujemy najwyższą jakość i satysfakcję z zakupu.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 4,
