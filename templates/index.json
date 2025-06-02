@@ -45,49 +45,49 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Dainese-Logo.png",
-            "link": "shopify://collections/hjc"
+            "link": "shopify://collections/dainese"
           }
         },
         "slide_PHkKUA": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/alpinestars-logo-on-transparent-background-free-vector.jpg",
-            "link": ""
+            "link": "shopify://collections/alpinestars"
           }
         },
         "slide_Y7pyaN": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/buse_logo.png",
-            "link": ""
+            "link": "shopify://collections/buse"
           }
         },
         "slide_WcA7Uz": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/HJC.png",
-            "link": ""
+            "link": "shopify://collections/hjc"
           }
         },
         "slide_gJbBTq": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/caberg.png",
-            "link": ""
+            "link": "shopify://collections/caberg"
           }
         },
         "slide_hPYgCL": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/airoh.png",
-            "link": ""
+            "link": "shopify://collections/airoh"
           }
         },
         "slide_3MLmFi": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/oneal.png",
-            "link": ""
+            "link": "shopify://collections/oneal"
           }
         }
       },
