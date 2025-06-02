@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "custom-slideshow": {
       "type": "custom-slideshow",
@@ -17,8 +17,7 @@
           "settings": {
             "button": true,
             "button_text": "Zobacz produkt",
-            "button_link": "shopify://products/203246365",
-            "image": "shopify://shop_images/tshirts.jpg"
+            "button_link": "shopify://products/203246365"
           }
         },
         "slide_jjXGNrF": {
@@ -26,8 +25,7 @@
           "settings": {
             "button": true,
             "button_text": "Zobacz więcej",
-            "button_link": "",
-            "image": "shopify://shop_images/small-business-interior.jpg"
+            "button_link": ""
           }
         }
       },
@@ -46,49 +44,44 @@
         "slide_y3Wj7z": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/vecteezy_adidas-logo-symbol-clothes-design-icon-abstract-football_10994276.jpg",
+            "image": "shopify://shop_images/Dainese-Logo.png",
             "link": "shopify://collections/hjc"
           }
         },
         "slide_PHkKUA": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/vecteezy_puma-logo-black-symbol-with-name-clothes-design-icon_10994431.jpg",
+            "image": "shopify://shop_images/alpinestars-logo-on-transparent-background-free-vector.jpg",
             "link": ""
           }
         },
         "slide_Y7pyaN": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/vecteezy_air-jordan-jumpman-logo-on-transparent-background_14414668.jpg",
             "link": ""
           }
         },
         "slide_WcA7Uz": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/logo_cmyk-1.png",
             "link": ""
           }
         },
         "slide_gJbBTq": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
             "link": ""
           }
         },
         "slide_hPYgCL": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/iphone-detects-qr-code.jpg",
             "link": ""
           }
         },
         "slide_3MLmFi": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/mens-fashion-watch.jpg",
             "link": ""
           }
         }
@@ -105,7 +98,7 @@
       "settings": {
         "slide_height": 20,
         "space_between": 10,
-        "image_width": 120
+        "image_width": 170
       }
     },
     "collection_list_NntrAd": {
