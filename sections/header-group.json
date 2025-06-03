@@ -20,18 +20,10 @@
             "text": "Darmowa dostawa od 99zł",
             "link": ""
           }
-        },
-        "announcement_HmbQgn": {
-          "type": "announcement",
-          "settings": {
-            "text": "Witamy w naszym sklepie",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "announcement_EjjBJT",
-        "announcement_HmbQgn"
+        "announcement_EjjBJT"
       ],
       "settings": {
         "auto_rotate": true,
