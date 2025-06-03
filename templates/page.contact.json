@@ -17,49 +17,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_kfPb3t": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_43FNbf": {
-          "type": "heading",
-          "settings": {
-            "heading": "Jesteśmy profesjonalnym sklepem motocyklowym—od 2010 roku dostarczamy kaski, odzież i akcesoria, które spełniają najwyższe normy bezpieczeństwa.Masz pytania dotyczące dostępności produktów, rozmiarówek czy formy płatności?Napisz do nas lub zadzwoń – odpowiadamy w ciągu 24 godzin.",
-            "heading_size": "h2"
-          }
-        },
-        "text_gVUzth": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Udostępnij klientom informacje o swojej marce. Opisz produkt, udostępnij ogłoszenia lub przywitaj klientów w swoim sklepie.</p>"
-          }
-        },
-        "button_4bhUxj": {
-          "type": "button",
-          "settings": {
-            "button_label": "Przycisk z etykietą",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_43FNbf",
-        "text_gVUzth",
-        "button_4bhUxj"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "multicolumn_nF3rWa": {
       "type": "multicolumn",
       "blocks": {
@@ -128,7 +85,6 @@
   },
   "order": [
     "main",
-    "rich_text_kfPb3t",
     "multicolumn_nF3rWa",
     "form"
   ]
