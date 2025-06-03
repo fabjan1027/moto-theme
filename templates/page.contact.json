@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "custom_css": [],
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -22,8 +23,8 @@
         "heading_43FNbf": {
           "type": "heading",
           "settings": {
-            "heading": "Opowiedz o swojej marce",
-            "heading_size": "h1"
+            "heading": "Jesteśmy profesjonalnym sklepem motocyklowym—od 2010 roku dostarczamy kaski, odzież i akcesoria, które spełniają najwyższe normy bezpieczeństwa.Masz pytania dotyczące dostępności produktów, rozmiarówek czy formy płatności?Napisz do nas lub zadzwoń – odpowiadamy w ciągu 24 godzin.",
+            "heading_size": "h2"
           }
         },
         "text_gVUzth": {
@@ -65,8 +66,8 @@
         "column_BFPKar": {
           "type": "column",
           "settings": {
-            "title": "Kolumna",
-            "text": "<p>Połącz tekst z obrazem, aby skierować uwagę na wybrany produkt, kolekcję lub wpis na blogu. Dodaj szczegóły dotyczące dostępności, stylu lub dołącz recenzję.</p>",
+            "title": "Biuro obsługi klienta",
+            "text": "<p>Telefon: <br/>+48 606 543 490 <br/>(Pon–Pt: 9:00–17:00)<br/><br/><br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -74,8 +75,8 @@
         "column_Hr38YV": {
           "type": "column",
           "settings": {
-            "title": "Kolumna",
-            "text": "<p>Połącz tekst z obrazem, aby skierować uwagę na wybrany produkt, kolekcję lub wpis na blogu. Dodaj szczegóły dotyczące dostępności, stylu lub dołącz recenzję.</p>",
+            "title": "Napisz do nas  <strong>E-mail:</strong>",
+            "text": "<h4>  <a href=\"mailto:kontakt@sm-moto.pl\">kontakt@sm-moto.pl</a><br/><br/>  <a href=\"mailto:reklamacje@sm-moto.pl\">reklamacje@sm-moto.pl</a><br/><br/>  <a href=\"mailto:wspolpraca@sm-moto.pl\">wspolpraca@sm-moto.pl</a></h4><p>Odpowiadamy w ciągu 24 godzin.</p>",
             "link_label": "",
             "link": ""
           }
@@ -83,8 +84,8 @@
         "column_Eda4MM": {
           "type": "column",
           "settings": {
-            "title": "Kolumna",
-            "text": "<p>Połącz tekst z obrazem, aby skierować uwagę na wybrany produkt, kolekcję lub wpis na blogu. Dodaj szczegóły dotyczące dostępności, stylu lub dołącz recenzję.</p>",
+            "title": "Pomoc i FAQ",
+            "text": "<p><a href=\"/pages/dostawa\">Dostawa</a></p><p><a href=\"/pages/zwroty\">Zwroty</a></p><p><a href=\"/pages/gwarancja\">Gwarancja</a></p><p><a href=\"/pages/faq\">FAQ</a></p><p><a href=\"/pages/tabela-rozmiarow\">Tabela rozmiarów</a></p>",
             "link_label": "",
             "link": ""
           }
@@ -98,12 +99,12 @@
       "custom_css": [],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Informację",
+        "title": "Dane kontaktowe",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Przycisk z etykietą",
-        "button_link": "shopify://policies/privacy-policy",
+        "button_label": "Napisz do nas",
+        "button_link": "mailto:kontakt@sm-moto.pl",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
