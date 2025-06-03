@@ -18,7 +18,7 @@
         "newsletter_enable": false,
         "newsletter_heading": "Zapisz się do naszego newslettera!",
         "enable_follow_on_shop": false,
-        "show_social": false,
+        "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": true,
         "payment_enable": true,
