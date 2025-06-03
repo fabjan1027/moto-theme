@@ -1,0 +1,81 @@
+{{ 'categories-collection-custom.css' | asset_url | stylesheet_tag }}
+
+<section class='categories page-width' id='categories'>
+  <div class='container'>
+    {% if section.settings.section_title != blank %}
+      <h2 class='section-title'>{{ section.settings.section_title }}</h2>
+    {% endif %}
+    <div class='categories__grid' id='categories-grid'>
+      {% for block in section.blocks %}
+        {% assign link = block.settings.link %}
+        <div
+          class='category-card'
+        >
+          <a
+            href='{{ link | default: '#' }}'
+            {{ block.shopify_attributes }}
+          >
+            {% if block.settings.image != blank %}
+              <img
+                src='{{ block.settings.image | image_url: width: 1500 }}'
+                width='{{ block.settings.image.width }}'
+                height='{{ block.settings.image.height }}'
+                loading='lazy'
+              >
+            {% endif %}
+            <div class='category-card__content'>
+              {% if block.settings.title != blank %}
+                <h3>{{ block.settings.title }}</h3>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kategorie",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Tytuł sekcji",
+      "default": "Kategorie"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Kategoria",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tytuł kategorii",
+          "default": "Nowa kategoria"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Obraz kategorii"
+        },
+
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link do kategorii"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Kategorie"
+    }
+  ]
+}
+{% endschema %}

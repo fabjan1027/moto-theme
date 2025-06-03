@@ -8,9 +8,17 @@
  * ------------------------------------------------------------
  */
 {
-  "markets": {
-    "pl": {
-      "parent": "@default"
+  "parent": "footer-group.json",
+  "context": {
+    "market": "pl"
+  },
+  "sections": {
+    "footer": {
+      "settings": {
+        "enable_language_selector": false,
+        "margin_top": 12
+      },
+      "blocks": {}
     }
   }
 }

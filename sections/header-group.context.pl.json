@@ -8,9 +8,9 @@
  * ------------------------------------------------------------
  */
 {
-  "markets": {
-    "pl": {
-      "parent": "@default"
-    }
-  }
+  "parent": "header-group.json",
+  "context": {
+    "market": "pl"
+  },
+  "sections": {}
 }
