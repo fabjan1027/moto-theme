@@ -1,0 +1,50 @@
+{{ 'features-custom.css' | asset_url | stylesheet_tag }}
+
+<section class="features page-width">
+  <div class="container__features">
+    <div class="features__grid" id="features-grid">
+      {% for block in section.blocks %}
+        <div class="feature">
+          {% if block.settings.icon != blank %}
+            <i class="{{ block.settings.icon }}"></i>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <h3>{{ block.settings.text }}</h3>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Features",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Funkcja",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Ikona (https://fontawesome.com/icons)"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Nagłówek",
+          "default": "Tekst"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Features"
+    }
+  ]
+}
+{% endschema %}
