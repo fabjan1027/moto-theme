@@ -108,80 +108,6 @@
         "image_width": 170
       }
     },
-    "categories_collection_awkiMM": {
-      "type": "categories-collection",
-      "blocks": {
-        "category_Qpaaaw": {
-          "type": "category",
-          "settings": {
-            "title": "Kaski",
-            "image": "shopify://shop_images/d430f31bd9d1b6bf49bfcd78362af0af.jpg",
-            "link": "shopify://collections/kaski"
-          }
-        },
-        "category_p8cf4n": {
-          "type": "category",
-          "settings": {
-            "title": "Kurtki",
-            "image": "shopify://shop_images/8fe123f7f6c401ae0bded2b810545be6.jpg",
-            "link": "shopify://collections/kurtki"
-          }
-        },
-        "category_BVq6Gt": {
-          "type": "category",
-          "settings": {
-            "title": "Rękawice",
-            "image": "shopify://shop_images/e0c59e53c7f0ea97947285e5e72a1a40.jpg",
-            "link": "shopify://collections/rekawice-motocyklowe"
-          }
-        },
-        "category_abQBKM": {
-          "type": "category",
-          "settings": {
-            "title": "Spodnie",
-            "image": "shopify://shop_images/5566884be2593ec409304cc674d881f3.jpg",
-            "link": "shopify://collections/spodnie"
-          }
-        },
-        "category_BtWzzf": {
-          "type": "category",
-          "settings": {
-            "title": "Buty",
-            "image": "shopify://shop_images/7058422a998c355cebdcecd58b281f47.jpg",
-            "link": "shopify://collections/buty"
-          }
-        },
-        "category_PcAajf": {
-          "type": "category",
-          "settings": {
-            "title": "Akcesoria",
-            "image": "shopify://shop_images/2d4c95ef2f1a8f871301b1deed20e954.jpg",
-            "link": "shopify://collections/stojaki-podstawy-centralne-i-akcesoria-motocyklowe-acebikes-sw-motech"
-          }
-        },
-        "category_7JBxB7": {
-          "type": "category",
-          "settings": {
-            "title": "Interkomy",
-            "image": "shopify://shop_images/ba8e683062296993474645323b383e72.jpg",
-            "link": "shopify://collections/interkomy-motocyklowe-komfort-i-komunikacja-na-trasie"
-          }
-        }
-      },
-      "block_order": [
-        "category_Qpaaaw",
-        "category_p8cf4n",
-        "category_BVq6Gt",
-        "category_abQBKM",
-        "category_BtWzzf",
-        "category_PcAajf",
-        "category_7JBxB7"
-      ],
-      "name": "Kategorie",
-      "settings": {
-        "section_title": "Kategorie"
-      }
-    },
     "custom_features_VKkYFq": {
       "type": "custom-features",
       "blocks": {
@@ -230,6 +156,80 @@
       ],
       "name": "Features",
       "settings": {}
+    },
+    "categories_collection_awkiMM": {
+      "type": "categories-collection",
+      "blocks": {
+        "category_Qpaaaw": {
+          "type": "category",
+          "settings": {
+            "title": "Kaski",
+            "image": "shopify://shop_images/d430f31bd9d1b6bf49bfcd78362af0af.jpg",
+            "link": "shopify://collections/kaski"
+          }
+        },
+        "category_BVq6Gt": {
+          "type": "category",
+          "settings": {
+            "title": "Rękawice",
+            "image": "shopify://shop_images/e0c59e53c7f0ea97947285e5e72a1a40.jpg",
+            "link": "shopify://collections/rekawice-motocyklowe"
+          }
+        },
+        "category_p8cf4n": {
+          "type": "category",
+          "settings": {
+            "title": "Kurtki",
+            "image": "shopify://shop_images/8fe123f7f6c401ae0bded2b810545be6.jpg",
+            "link": "shopify://collections/kurtki"
+          }
+        },
+        "category_abQBKM": {
+          "type": "category",
+          "settings": {
+            "title": "Spodnie",
+            "image": "shopify://shop_images/5566884be2593ec409304cc674d881f3.jpg",
+            "link": "shopify://collections/spodnie"
+          }
+        },
+        "category_BtWzzf": {
+          "type": "category",
+          "settings": {
+            "title": "Buty",
+            "image": "shopify://shop_images/7058422a998c355cebdcecd58b281f47.jpg",
+            "link": "shopify://collections/buty"
+          }
+        },
+        "category_PcAajf": {
+          "type": "category",
+          "settings": {
+            "title": "Akcesoria",
+            "image": "shopify://shop_images/2d4c95ef2f1a8f871301b1deed20e954.jpg",
+            "link": "shopify://collections/stojaki-podstawy-centralne-i-akcesoria-motocyklowe-acebikes-sw-motech"
+          }
+        },
+        "category_7JBxB7": {
+          "type": "category",
+          "settings": {
+            "title": "Interkomy",
+            "image": "shopify://shop_images/ba8e683062296993474645323b383e72.jpg",
+            "link": "shopify://collections/interkomy-motocyklowe-komfort-i-komunikacja-na-trasie"
+          }
+        }
+      },
+      "block_order": [
+        "category_Qpaaaw",
+        "category_BVq6Gt",
+        "category_p8cf4n",
+        "category_abQBKM",
+        "category_BtWzzf",
+        "category_PcAajf",
+        "category_7JBxB7"
+      ],
+      "name": "Kategorie",
+      "settings": {
+        "section_title": "Kategorie"
+      }
     },
     "featured_collection_9LwnwQ": {
       "type": "featured-collection",
