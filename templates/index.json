@@ -40,74 +40,6 @@
         "slideshow_height": 405
       }
     },
-    "custom-carousel": {
-      "type": "custom-carousel",
-      "blocks": {
-        "slide_y3Wj7z": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/Dainese-Logo.png",
-            "link": "shopify://collections/dainese"
-          }
-        },
-        "slide_PHkKUA": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/alpinestars-logo-on-transparent-background-free-vector.jpg",
-            "link": "shopify://collections/alpinestars"
-          }
-        },
-        "slide_Y7pyaN": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/buse_logo.png",
-            "link": "shopify://collections/buse"
-          }
-        },
-        "slide_WcA7Uz": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/HJC.png",
-            "link": "shopify://collections/hjc"
-          }
-        },
-        "slide_gJbBTq": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/caberg.png",
-            "link": "shopify://collections/caberg"
-          }
-        },
-        "slide_hPYgCL": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/airoh.png",
-            "link": "shopify://collections/airoh"
-          }
-        },
-        "slide_3MLmFi": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/oneal.png",
-            "link": "shopify://collections/oneal"
-          }
-        }
-      },
-      "block_order": [
-        "slide_y3Wj7z",
-        "slide_PHkKUA",
-        "slide_Y7pyaN",
-        "slide_WcA7Uz",
-        "slide_gJbBTq",
-        "slide_hPYgCL",
-        "slide_3MLmFi"
-      ],
-      "settings": {
-        "slide_height": 20,
-        "space_between": 10,
-        "image_width": 170
-      }
-    },
     "custom_features_VKkYFq": {
       "type": "custom-features",
       "blocks": {
@@ -231,6 +163,74 @@
         "section_title": "Kategorie"
       }
     },
+    "custom-carousel": {
+      "type": "custom-carousel",
+      "blocks": {
+        "slide_y3Wj7z": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Dainese-Logo.png",
+            "link": "shopify://collections/dainese"
+          }
+        },
+        "slide_PHkKUA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/alpinestars-logo-on-transparent-background-free-vector.jpg",
+            "link": "shopify://collections/alpinestars"
+          }
+        },
+        "slide_Y7pyaN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/buse_logo.png",
+            "link": "shopify://collections/buse"
+          }
+        },
+        "slide_WcA7Uz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/HJC.png",
+            "link": "shopify://collections/hjc"
+          }
+        },
+        "slide_gJbBTq": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/caberg.png",
+            "link": "shopify://collections/caberg"
+          }
+        },
+        "slide_hPYgCL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/airoh.png",
+            "link": "shopify://collections/airoh"
+          }
+        },
+        "slide_3MLmFi": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/oneal.png",
+            "link": "shopify://collections/oneal"
+          }
+        }
+      },
+      "block_order": [
+        "slide_y3Wj7z",
+        "slide_PHkKUA",
+        "slide_Y7pyaN",
+        "slide_WcA7Uz",
+        "slide_gJbBTq",
+        "slide_hPYgCL",
+        "slide_3MLmFi"
+      ],
+      "settings": {
+        "slide_height": 20,
+        "space_between": 10,
+        "image_width": 170
+      }
+    },
     "featured_collection_9LwnwQ": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -264,7 +264,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "najnowsze-produkty",
+        "collection": "uchwyt-na-sakwy",
         "products_to_show": 4,
         "title": "Najnowsze produkty",
         "heading_size": "h2",
