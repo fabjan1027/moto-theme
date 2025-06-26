@@ -557,5 +557,12 @@
       "expanded": "Rozwinięty formularz odbiorcy karty prezentowej",
       "collapsed": "Zwinięty formularz odbiorcy karty prezentowej"
     }
+  },
+  "customer_accounts": {
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "NIP"
+      }
+    }
   }
 }
