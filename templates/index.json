@@ -300,7 +300,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "uchwyt-na-sakwy",
+        "collection": "kaski-intergralne",
         "products_to_show": 4,
         "title": "Najnowsze produkty",
         "heading_size": "h2",
@@ -316,7 +316,7 @@
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
-        "show_vendor": false,
+        "show_vendor": true,
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
