@@ -164,6 +164,14 @@
             "image": "shopify://shop_images/32ba105b46d4b6a87556e733a655.webp",
             "link": "shopify://collections/wizjery"
           }
+        },
+        "category_HKKU3w": {
+          "type": "category",
+          "settings": {
+            "title": "Kufry i Sakwy",
+            "image": "shopify://shop_images/63.61.72.ART10072766GiviTopcaseH1.webp",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -174,7 +182,8 @@
         "category_BtWzzf",
         "category_PcAajf",
         "category_7JBxB7",
-        "category_mNhyxy"
+        "category_mNhyxy",
+        "category_HKKU3w"
       ],
       "name": "Kategorie",
       "settings": {
