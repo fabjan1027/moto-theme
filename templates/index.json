@@ -172,6 +172,14 @@
             "image": "shopify://shop_images/63.61.72.ART10072766GiviTopcaseH1.webp",
             "link": ""
           }
+        },
+        "category_Ye8wHU": {
+          "type": "category",
+          "settings": {
+            "title": "Ochraniacze i Zbroje",
+            "image": "shopify://shop_images/padded_square_image_3.png",
+            "link": "shopify://collections/zbroje-i-ochraniacze-motocyklowe"
+          }
         }
       },
       "block_order": [
@@ -183,7 +191,8 @@
         "category_PcAajf",
         "category_7JBxB7",
         "category_mNhyxy",
-        "category_HKKU3w"
+        "category_HKKU3w",
+        "category_Ye8wHU"
       ],
       "name": "Kategorie",
       "settings": {
