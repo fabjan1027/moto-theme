@@ -156,6 +156,14 @@
             "image": "shopify://shop_images/ba8e683062296993474645323b383e72.jpg",
             "link": "shopify://collections/interkomy-motocyklowe-komfort-i-komunikacja-na-trasie"
           }
+        },
+        "category_mNhyxy": {
+          "type": "category",
+          "settings": {
+            "title": "Wizjery",
+            "image": "shopify://shop_images/32ba105b46d4b6a87556e733a655.webp",
+            "link": "shopify://collections/wizjery"
+          }
         }
       },
       "block_order": [
@@ -165,7 +173,8 @@
         "category_abQBKM",
         "category_BtWzzf",
         "category_PcAajf",
-        "category_7JBxB7"
+        "category_7JBxB7",
+        "category_mNhyxy"
       ],
       "name": "Kategorie",
       "settings": {
