@@ -21,6 +21,14 @@
             "image": "shopify://shop_images/d75d536b8b5c7b0ad07c5e9491016cd5.jpg"
           }
         },
+        "slide_VxVfzC": {
+          "type": "slide",
+          "settings": {
+            "button": false,
+            "button_text": "Zobacz więcej",
+            "button_link": ""
+          }
+        },
         "slide_jjXGNrF": {
           "type": "slide",
           "settings": {
@@ -33,6 +41,7 @@
       },
       "block_order": [
         "slide_jjGNrF",
+        "slide_VxVfzC",
         "slide_jjXGNrF"
       ],
       "settings": {
@@ -68,7 +77,7 @@
           "type": "feature",
           "settings": {
             "icon": "fas fa-undo",
-            "text": "Możliwość zwrotu przez 30 dni"
+            "text": "Możliwość zwrotu przez 14 dni"
           }
         },
         "feature_LgCyt6": {
