@@ -133,6 +133,15 @@
                     {%- endif -%}
                   </div>
                 {%- endif -%}
+              {%- when 'delivery_description' -%}
+                <div class="delivery-description">
+                  {% if block.settings.icon != blank %}
+                    <i class="{{ block.settings.icon }}" style="color: #E10600"></i>
+                  {% endif %}
+                  <span class="delivery-description-text">
+                    {{ block.settings.text_delivery -}}
+                  </span>
+                </div>
                 <div {{ block.shopify_attributes }}>
                   {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                   {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
@@ -778,6 +787,24 @@
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
+    },
+    {
+      "type": "delivery_description",
+      "name": "t:sections.main-product.blocks.delivery_description.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (https://fontawesome.com/icons)"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_delivery",
+          "default": "Dostawa",
+          "label": "Text"
+        }
+      ]
     },
     {
       "type": "sku",

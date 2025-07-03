@@ -1638,6 +1638,9 @@
         "price": {
           "name": "Cena"
         },
+        "delivery_description": {
+          "name": "Opis dostawy"
+        },
         "quantity_selector": {
           "name": "Selektor ilości"
         },
