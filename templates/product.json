@@ -35,6 +35,13 @@
           "type": "price",
           "settings": {}
         },
+        "delivery_description_7L8gWP": {
+          "type": "delivery_description",
+          "settings": {
+            "icon": "fa-solid fa-truck",
+            "text_delivery": "Dostawa w ciągu <strong>5 dni!</strong>"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -73,6 +80,7 @@
         "title",
         "caption",
         "price",
+        "delivery_description_7L8gWP",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
