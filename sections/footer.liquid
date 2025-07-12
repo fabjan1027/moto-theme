@@ -1,19 +1,19 @@
 {{ 'section-footer-custom.css' | asset_url | stylesheet_tag }}
 
-<footer class='footer'>
-  <div class='container'>
-    <div class='footer__content page-width'>
-      <div class='footer__section'>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__content page-width">
+      <div class="footer__section">
         <h4>{{ section.settings.brand_title | escape -}}</h4>
         <p>{{ section.settings.brand_description }}</p>
       </div>
-      <div class='footer__section'>
+      <div class="footer__section">
         <h4>{{ section.settings.categories_title }}</h4>
         {% if section.settings.categories_menu != blank %}
           <ul>
             {% for link in linklists[section.settings.categories_menu].links %}
               <li>
-                <a href='{{ link.url }}'>{{ link.title }}</a>
+                <a href="{{ link.url }}">{{ link.title }}</a>
               </li>
             {% endfor %}
           </ul>
@@ -21,37 +21,37 @@
           <p>Brak kategorii.</p>
         {% endif %}
       </div>
-      <div class='footer__section'>
+      <div class="footer__section">
         <h4>{{ section.settings.help_title }}</h4>
         {% if section.settings.help_menu != blank %}
           <ul>
             {% for link in linklists[section.settings.help_menu].links %}
               <li>
-                <a href='{{ link.url }}'>{{ link.title }}</a>
+                <a href="{{ link.url }}">{{ link.title }}</a>
               </li>
             {% endfor %}
           </ul>
         {% endif %}
       </div>
-      <div class='footer__section'>
+      <div class="footer__section">
         <h4>{{ section.settings.contact_title }}</h4>
-        <p><i class='fas fa-map-marker-alt'></i> {{ section.settings.contact_address }}</p>
-        <p><i class='fas fa-phone'></i> {{ section.settings.contact_phone }}</p>
-        <p><i class='fas fa-envelope'></i> {{ section.settings.contact_email }}</p>
+        <p><i class="fas fa-map-marker-alt"></i> {{ section.settings.contact_address }}</p>
+        <p><i class="fas fa-phone"></i> {{ section.settings.contact_phone }}</p>
+        <p><i class="fas fa-envelope"></i> {{ section.settings.contact_email }}</p>
       </div>
     </div>
-    <div class='footer__bottom'>
-      <small class='copyright__content'
-        >&copy; {{ 'now' | date: '%Y' }}, {{ section.settings.brand_name | escape -}}
+    <div class="footer__bottom">
+      <small class="copyright__content"
+        >&copy; {{ 'now' | date: '%Y' }}, {{ section.settings.brand_title | escape -}}
       </small>
 
       {%- if section.settings.show_policy -%}
-        <ul class='policies list-unstyled'>
+        <ul class="policies list-unstyled">
           {%- for policy in shop.policies -%}
             {%- if policy != blank -%}
               <li>
-                <small class='copyright__content'>
-                  <a href='{{ policy.url }}'>{{ policy.title | escape }}</a>
+                <small class="copyright__content">
+                  <a href="{{ policy.url }}">{{ policy.title | escape }}</a>
                 </small>
               </li>
             {%- endif -%}

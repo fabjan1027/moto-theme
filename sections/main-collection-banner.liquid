@@ -2,87 +2,11 @@
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-.collection-hero.collection-hero--with-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.collection-hero.collection-hero--with-image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
-  z-index: 1;
-}
-
-.collection-hero.collection-hero--with-image .collection-hero__inner {
-  position: relative;
-  z-index: 2;
-  min-height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.collection-hero__title {
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  line-height: 1.2;
-  margin: 0;
-  padding: 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-.collection-hero__description {
-  max-width: 700px;
-  margin: 1rem auto 0;
-  color: #f0f0f0;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.collection-hero__button {
-  display: inline-block;
-  margin-top: 20px;
-  background-color: #e2001a;
-  color: #ffffff;
-  padding: 12px 28px;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.collection-hero__button:hover {
-  background-color: #c60016;
-}
-
-@media screen and (max-width: 749px) {
-  .collection-hero__title {
-    font-size: 32px;
-    letter-spacing: 1px;
+  @media screen and (max-width: 749px) {
+    .collection-hero--with-image .collection-hero__inner {
+      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
+    }
   }
-  .collection-hero__description {
-    font-size: 14px;
-    max-width: 90%;
-  }
-  .collection-hero__button {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-}
 {%- endstyle -%}
 
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
@@ -92,22 +16,22 @@
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
       </h1>
-      {% if section.settings.show_collection_description %}
+
+      {%- if section.settings.show_collection_description -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>
-      {% endif %}
-      <a href="{{ collection.url }}" class="collection-hero__button">Zobacz kolekcję</a>
+      {%- endif -%}
     </div>
 
-    {% if section.settings.show_collection_image and collection.image %}
+    {%- if section.settings.show_collection_image and collection.image -%}
       <div class="collection-hero__image-container media gradient">
         <img
           srcset="
-            {% if collection.image.width >= 165 %}{{ collection.image | image_url: width: 165 }} 165w,{% endif %}
-            {% if collection.image.width >= 360 %}{{ collection.image | image_url: width: 360 }} 360w,{% endif %}
-            {% if collection.image.width >= 535 %}{{ collection.image | image_url: width: 535 }} 535w,{% endif %}
-            {% if collection.image.width >= 750 %}{{ collection.image | image_url: width: 750 }} 750w,{% endif %}
-            {% if collection.image.width >= 1070 %}{{ collection.image | image_url: width: 1070 }} 1070w,{% endif %}
-            {% if collection.image.width >= 1500 %}{{ collection.image | image_url: width: 1500 }} 1500w,{% endif %}
+            {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+            {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+            {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+            {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+            {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
             {{ collection.image | image_url }} {{ collection.image.width }}w
           "
           src="{{ collection.image | image_url: width: 750 }}"
@@ -117,7 +41,7 @@
           height="{{ collection.image.height }}"
         >
       </div>
-    {% endif %}
+    {%- endif -%}
   </div>
 </div>
 
